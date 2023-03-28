@@ -10,7 +10,7 @@ var angle=60;
 
 var ground;
 
-var fan,fan1,fan2,fan3;
+var rect,rect1,rect2,rect3;
 var ball;
 
 var btn1;
@@ -34,13 +34,19 @@ function setup() {
   btn2.position(20,30);
   btn2.size(50,50);
   btn2.mouseClicked(vForce);  
- fan = new Ground(50,370,50,30);
- fan1 = new Ground(150,370,50,30);
-  fan2 = new Ground(250,370,50,30);
-  fan3 = new Ground(350,370,50,30);
 
-  ball = Bodies.circle(200,200,20,ball_options);
-  World.add(world,ball);
+ rect = new Ground(50,370,50,30);
+ rect1 = new Ground(150,370,50,30);
+ //Nas duas linhas acima, você esta criando um objeto da classe Ground, crie o seguinte:
+ //objeto rect2 com 250,370,50,30
+ //objeto rect 3 com 350,370,50,30
+ //???
+
+
+ //Utilize 'Bodies.circle' para criar um corpo circular para a bola
+  ball = ???(200,200,20,ball_options);
+  //Adicione a bola ao mundo
+ ???(world,ball);
 
     rectMode(CENTER);
   ellipseMode(RADIUS);
@@ -56,17 +62,18 @@ function draw()
 
   ellipse(ball.position.x,ball.position.y,20);
  rect(ground.position.x,ground.position.y,750,20);
-    fan.show();
-fan1.show();
-fan2.show();
-  fan3.show();
+ rect.show();
+ rect1.show();
+ //Nas linhas acima, você esta mostrando na tela os objetos da class Ground, faça o mesmo com os objetos rect2 e rect3
+ //???
   Engine.update(engine);
 }
 
 
 function vForce()
 {
-  Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:-0.05});
+  //Utilize o código ' Matter.Body.applyForce' para aplicar força em uma bola
+  ???(ball,{x:0,y:0},{x:0,y:-0.05});
 }
   
 
