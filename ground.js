@@ -1,15 +1,19 @@
 class Ground 
 {
-  constructor(x, y, w, h) 
+  //Defina as características do constructor para (x, y, w, h)
+  constructor(???) 
   {
+    //Defina que o rect será estático, para isso, coloque a palavra 'true'
     let options = {
-      isStatic:true
+      isStatic:???
     };
     
-    this.body = Bodies.rectangle(x, y, w, h, options);
+    //Utilize o código ' Bodies.rectangle'para que o corpo que você irá criar seja um retângulo
+    this.body = ???(x, y, w, h, options);
     this.w = w;
     this.h = h;
-    World.add(world, this.body);
+    //Utilize o código ' World.add' para adicionar esse corpo ao mundo
+    ???(world, this.body);
   }
 
   show() {
@@ -25,8 +29,9 @@ class Ground
    rotate(angle);
    rect(0, 0, this.w, this.h);
 
-  ///  rect(pos.x, pos.y, this.w, this.h);
+  
     pop();
+    //Utilize 'angle' para definir o ângulo do rect
     angle +=0.1;
 
   }
